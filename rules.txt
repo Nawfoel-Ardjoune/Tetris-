@@ -1,0 +1,20 @@
++++++++++++++++++++++++++++++++ LE TETRIS ++++++++++++++++++++++++++++++++
+L'OBJECTIF :
+
+Votre but dans ce jeu est de faire le meilleur Score possible BONNE CHANCE
+Vous jourez dans un champs qui pourra être un cercle, un triangle ou 
+un losange. Pour amassez des points il faudra empiler des bloc de 
+différentes formes pour remplir la base et libérer de l'espace.
+_________________________________________________________________________
+LES REGLES : 
+Pour y arrivé Vous aurez 3 tentative. il vous faudra donc soit choisir 
+entre les différent bloc disponible et ensuite les placé dans le champs 
+par le bord inférieur gauche du bloc sur des coordonnées disponible.
+OU
+Directement utiliser le bloc qui vous sera fournis
+
+J'aimerai faire plusieur niveau de difficulté mais je promet rien.
+==========================================================================
+TADAM Vous savez jouer !!
+On espère que vous passerez un bon moment. Ardjoune Nawfoel et Rabah Debba.
+**************************************************************************
