@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 void viderLeBuffer(){
 	int c =0;
@@ -41,12 +40,27 @@ int changeToInt(){
 	}
 }
 
+void menu(char* filename){
+	char c;
+	FILE * fp;
+	fp = fopen(filename,"r");
+	c = fgetc(fp);
+	if(fp == NULL){
+		printf("Une erreur du fopen est survenu\n");
+		exit(1);
+	}
+	while(c != EOF){
+		printf("%c",c);
+		c = fgetc(fp);
+	}
+	fclose(fp);
+}
+
 
 int main(int argc, char const *argv[])
 {
+	menu("start.txt");
 	int test = 0;
-	FILE * fp;
-	char c ;
 	do{
 		int choix = changeToInt();
 		switch(choix){
@@ -55,19 +69,8 @@ int main(int argc, char const *argv[])
 			test = 0;
 			break;
 			case 2:
-			fp = fopen("rules.txt","r");
-			c = fgetc(fp);
-			if(fp == NULL){
-				printf("Une erreur du fopen est survenu\n");
-				exit(1);
-			}
-			while(c != EOF){
-				printf("%c",c);
-				c = fgetc(fp);
-			}
-			fclose(fp);
+			menu("rules.txt");
 			test = 0;
-			printf("Test 2 OK !\n");
 			break;
 			default: 
 			printf("Erreur saisissez : 1 pour Jouer, 2 pour voir les règles !\n");

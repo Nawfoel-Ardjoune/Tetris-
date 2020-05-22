@@ -1,0 +1,3 @@
++++++++++++++++++++++++++++++++ LE TETRIS ++++++++++++++++++++++++++++++++
+
+PRESS 1 : To start playing _-_-_-_ PRESS 2 : To show help. 

@@ -1,0 +1,22 @@
+TODO
+
+|*| c'est a nous de le faire
+|-| c'est le pseudo code que j'ai fais
+
+-Le jeu se lance
+	*On affiche les menu
+	-Le joueur choisie de voir les règles :
+		-si oui on lui affiche les règles
+	-Sinon on lance le jeu 
+	-faire ca tant que il n'y a pas de défaite
+		-Le joueur choisie les champs (cercle, triangle losange, je suis pas sure mais carré aussi)
+		*On crée le plateau avec l'affichage adéquat 
+		-Le joueur choisie son block ou on lui en fournis un
+		-Le joueur place le block
+		*On check l'emplacement
+		-On check si la base est pleine : 
+			-si la base est pleine on la vide
+			-on met a jour le score
+		-Sinon on test la condition de défaite
+	-Si défaite alors fin de jeu
+-On retourne le menu de fin avec la score.
