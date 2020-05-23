@@ -8,4 +8,4 @@ Tetris: $(OBJ) tetris.h
 	$(CC) -c $< $(CFLAGS)
 
 clean:
-	rm *.o *~ core
+	rm *.o ./Tetris

@@ -57,11 +57,11 @@ void menu(char* filename){
 int main(int argc, char const *argv[])
 {
 	int test = 0;
-	int defaite = 0;
+	int suite = 0;
 	int compteur = 0;
-	menu("start.txt");
 	
-	do{
+	do{/* ##ICI LE SWITCH POUR LE MENU##  */
+		menu("start.txt");
 		int choix = changeToInt();
 		switch(choix){
 			case 1:
@@ -80,7 +80,35 @@ int main(int argc, char const *argv[])
 	
 	do{
 		/*code du jeu*/
-	}while(defaite == 0);
+		do{/* ##ICI SWITCH POUR CERCLE TRIANGLE LOSANGE OU QUITTER## */
+			printf("Cercle: 1, Triangle: 2, Losange: 3 OR Press 0 to quit\n");
+			int choix2 = changeToInt();//
+			switch(choix2){
+				case 1:
+				printf("cercle\n");
+				suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+				test = 0;
+				break;
+				case 2:
+				printf("triangle\n");
+				suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+				test = 0;
+				break;
+				case 3:
+				printf("Losange\n");
+				test = 0;
+				case 0:
+				exit(1);
+				suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+				test = 0;
+				break;
+				default: 
+				printf("Erreur !\n");
+				suite = 1; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+				test = 1;
+			}
+		}while(test);
+	}while(suite);
 	
 	return 0;
 }

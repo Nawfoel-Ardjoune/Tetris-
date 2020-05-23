@@ -5,8 +5,8 @@ TODO
 
 Faire : 
 •le makefile et séparer les fonction et fichier
-•les blocks et leurs fonctions 
-•les plateaux et leurs fonction 
+•les blocks et leurs fonctions  ---- NAWFOEL
+•les plateaux et leurs fonction ---- En Cours Rabah
 
 ### LANCEMENT DE L'EXECUTABLE ###	____Status : en cours____
 	-On lance l'exe du jeu 
@@ -17,16 +17,16 @@ Faire :
 
 ### La Boucle du jeu ###	____Status : URGENT____
 	•Faire : ---- Prototype du "Do While" ---- FAIT 
-		-Le joueur choisie les champs (cercle, triangle losange, je suis pas sure mais carré aussi)
-			•Switch 2 [losange/triangle/cercle].
-			•création du plateau (dynamiquement).
-			•affichage adéquat.
+		-Le joueur choisie les champs (cercle, triangle losange, je suis pas sure mais carré aussi) ---- FAIT
+			•Switch 2 [losange/triangle/cercle]. ---- FAIT
+			•création du plateau (dynamiquement). ---- FAIT 
+			•affichage adéquat. ---- RABAH
 		
 		-Le joueur choisie son block ou on lui en fournis un.
-			•Switch 3 [Choix de la pièce]. /!\ difficile.
-			•On doit lui afficher les block qui vont avec sont plateau OU lui en donner 1 ou 3 aleatoirement.
+			•Switch 3 [Choix de la pièce]. /!\ difficile. ---- NAWFOEL
+			•On doit lui afficher les block qui vont avec sont plateau OU lui en donner 1 ou 3 aleatoirement. ---- RABAH 
 		
-		-Le joueur place le block :
+		-Le joueur place le block : ---- NAWFOEL
 			•Si il peut :
 				•alors on y place son block.
 				•Si la base est pleine :
