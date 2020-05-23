@@ -59,13 +59,14 @@ int main(int argc, char const *argv[])
 	int test = 0;
 	int suite = 0;
 	int compteur = 0;
+	menu("start.txt");
 	
 	do{/* ##ICI LE SWITCH POUR LE MENU##  */
-		menu("start.txt");
+		printf("Saisissez : 1 pour Jouer, 2 pour voir les règles\n"); 
 		int choix = changeToInt();
 		switch(choix){
 			case 1:
-			printf("Test 1 OK !\n");
+			/* ## LANCE LE JEU ICI ## */
 			test = 0;
 			break;
 			case 2:
@@ -73,7 +74,7 @@ int main(int argc, char const *argv[])
 			test = 0;
 			break;
 			default: 
-			printf("Erreur saisissez : 1 pour Jouer, 2 pour voir les règles !\n");
+			printf("Erreur ! ");
 			test = 1;
 		}
 	}while(test);
@@ -98,10 +99,10 @@ int main(int argc, char const *argv[])
 				printf("Losange\n");
 				test = 0;
 				case 0:
-				exit(1);
-				suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
-				test = 0;
-				break;
+				return 0;
+				// suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+				// test = 0;
+				// break;
 				default: 
 				printf("Erreur !\n");
 				suite = 1; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
