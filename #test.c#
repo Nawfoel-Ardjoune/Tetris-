@@ -5,10 +5,7 @@
 int main(int argc, char const *argv[])
 
 {
-  int taille;
-  
-  	free(tab.main.array);
-	aff tab(taille);
+
 	
 	/* code */
 	FILE *fp;
