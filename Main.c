@@ -56,11 +56,13 @@ void menu(char* filename){
 	fclose(fp);
 }
 
-
 int main(int argc, char const *argv[])
 {
-	menu("start.txt");
 	int test = 0;
+	int defaite = 0;
+	int compteur = 0;
+	menu("start.txt");
+	
 	do{
 		int choix = changeToInt();
 		switch(choix){
@@ -77,5 +79,10 @@ int main(int argc, char const *argv[])
 			test = 1;
 		}
 	}while(test);
+	
+	do{
+		/*code du jeu*/
+	}while(defaite == 0);
+	
 	return 0;
 }
