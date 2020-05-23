@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "tetris.h"
 
 void viderLeBuffer(){
 	int c =0;

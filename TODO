@@ -8,33 +8,35 @@ Faire :
 •les blocks et leurs fonctions 
 •les plateaux et leurs fonction 
 
+### LANCEMENT DE L'EXECUTABLE ###	____Status : en cours____
+	-On lance l'exe du jeu 
+		•On affiche les menu ---- FAIT
+		-Le joueur choisie de voir les règles :	---- FAIT
+			•Switch 1 [regle/jouer] (peut etre mieux un simple if) ---- FAIT 
+			•Si oui : on lui affiche les règles ---- FAIT
 
--On lance l'exe du jeu ---- TODO une fois le jeu terminer  
-	-On affiche les menu ---- FAIT mais si t'arrive a faire un truc cool comme présentation
-	-Le joueur choisie de voir les règles :	---- FAIT
-		•Switch 1 [regle/jouer] (peut etre mieux un simple if) ---- FAIT 
-		-si oui on lui affiche les règles ---- FAIT
-	-Sinon on lance le jeu (Une fois que l'on aura qlqch a testé)
-
-	###La Boucle du jeu###
-	•Tant que (defaite == 0) faire : ---- Prototype du "Do While" FAIT 
-		•Switch 2 [losange/triangle/cercle].
+### La Boucle du jeu ###	____Status : URGENT____
+	•Faire : ---- Prototype du "Do While" ---- FAIT 
 		-Le joueur choisie les champs (cercle, triangle losange, je suis pas sure mais carré aussi)
-			•création du plateau (dynamiquement)
-			•affichage adéquat 
+			•Switch 2 [losange/triangle/cercle].
+			•création du plateau (dynamiquement).
+			•affichage adéquat.
+		
 		-Le joueur choisie son block ou on lui en fournis un.
-			•On doit lui afficher les block qui vont avec sont plateau OU lui en donner 1 ou 3 aleatoirement.
 			•Switch 3 [Choix de la pièce]. /!\ difficile.
-		-Le joueur place le block
-			•[Check]si il peut :
-				•alors on y place son block
-				•[check]Si la base est pleine :
+			•On doit lui afficher les block qui vont avec sont plateau OU lui en donner 1 ou 3 aleatoirement.
+		
+		-Le joueur place le block :
+			•Si il peut :
+				•alors on y place son block.
+				•Si la base est pleine :
 					•On libère la base.
 					•On met à jour le score et on remplace l'ancien (je crois c'est \r quand tu met un printf).  
 			•Sinon : 
-				•on incrément le compteur de fail
-				•[check]Si il y à "defaite" alors :
-					•On sort de la boucle. 
-					•On affiche le menu de défaite avec le score.
-					•On libère les allocation.
+				•On incrément le compteur de fail.
+				•Si il y a "defaite" alors :
+					•"Defaite" = 1. 
+					•renvoie le score.
+
+	• FIN Tant que (defaite == 0) ---- FAIT
 -On renvoie le menu de fin avec la score.
