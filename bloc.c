@@ -71,6 +71,106 @@ block_t block12{
   int taille =4 ; 
 }
 
+int * bchoix(int *tab,int taille){
+	int test =1;
+	do{/* ##ICI LE SWITCH POUR LE MENU##  */
+		printf("Saisissez : le block désiré\n"); 
+		int choix = changeToInt();
+		switch(choix){
+			case 0:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block1);
+				test =0;
+				break;
+			case 1:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block2);
+				test =0;
+				break;
+			case 2:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block3);
+				test =0;
+				break;
+			case 3:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block4);
+				test =0;
+				break;
+			case 4:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block5);
+				test =0;
+				break;
+			case 5:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block6);
+				test =0;
+				break;
+			case 6:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block7);
+				test =0;
+				break;
+			case 7:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block8);
+				test =0;
+				break;
+			case 8:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block9);
+				test =0;
+				break;
+			case 9:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block10);
+				test =0;
+				break;
+			case 10:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block11);
+				test =0;
+				break;
+			case 11:
+				int x = changeToInt();
+				int y = changeToInt();
+				pose(tab,x,y,block12);
+				test =0;
+				break;
+			default: 
+				printf("Erreur ! ");
+				test = 1;
+		}
+	}while(test);
 
+} 
+
+void afficheBlock(block_t block){
+	int tab [9];
+	int y,x;
+	for(int i=0;i<block.taille;i++){
+		tab[block.x[i]+block.y[i]*9];
+	}
+	for(y=0;y<3;y++){
+		for(x=0;x<3;x++){
+			if(tab[y*9+x]==1)
+				printf("#");
+		}
+		printf(" ");
+	}
+
+}
 
 

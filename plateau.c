@@ -1,6 +1,4 @@
-//#include"tetris.h"
-#include<stdio.h>
-#include<stdlib.h>
+#include"tetris.h"
 #include<math.h>
 #include<assert.h>
 #include<string.h>
@@ -13,7 +11,6 @@ int * make_place(int taille){
 	return plateau;
 	printf("end make\n");
 }
-
 static void drawLine(int * tab, int taille, int x0, int y0, int x1, int y1, int value) {
 	float y = 0.0f, pente;
 	int u = x1 - x0, v = y1 - y0, pas, depassement;
@@ -41,7 +38,6 @@ static void drawLine(int * tab, int taille, int x0, int y0, int x1, int y1, int 
   	}
   }
 }
-
 static void drawCircle(int * tab, int taille) {
 	printf("drawstart");
 	int x, r2 = ((taille/2) * (taille/2));
@@ -78,42 +74,43 @@ void testAndPut(int * champ, int x, int y,int taille,int type){
 		champ[x+y*taille] = 2;
 	}
 }
+}
 
-printf("out IF\n");
-  // else if(type == 2){	/*ICI POUR LE TRIANGLE*/
-
-  // }
-  // else if(type == 3){	/*ICI POUR LE LOSANGE*/
-
-  // }
+void pose(int * tab, int x, int y, block_t block){
+	int i =0;
+	for(i=0;i<block.taille;i++){
+		tab[(block->x[i]+x)+(block->y[i]+y)*block.taille];
+	}
 }
 
 void affplateau(int * tab, int taille){
-	printf("start aff\n");
+	printf("   0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27\n");
+	printf("   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =\n\n");
 	int x=0, y=0;
 	for(y=0;y<taille;y++){
+			printf(" %d ",y);
 		for(x=0;x<taille-1;x++){
 			if(tab[x+y*taille] == 1){
 				printf("#");
 			}else if(tab[x+y*taille] == 2){
 				printf("*");
 			}else{
-				printf(" ");
+				printf("•");
 			}
+			printf(" ");
 		}
 		if(tab[x+y*taille] == 1){
 			printf("#\n");
 		}else if(tab[x+y*taille] == 2){
 			printf("*\n");
 		}else{
-			printf(" \n");
+			printf("•\n");
 		}
+		printf(" \n");
 	}
-	printf("fin aff\n");
 }
 
 void remplir(int * tab, int taille){
-	printf("start arp\n");
 	int x=0, y=0;
 	for(y=0;y<taille;y++){
 		for(x=0;x<taille;x++){
@@ -125,18 +122,19 @@ void remplir(int * tab, int taille){
 			tab[x+y*taille] = 0 ;
 		}
 	}
-	printf("fin arp\n");
 }
 
-int main(void){
-	printf("Start");
-	int * test = make_place(21) ;
-	//drawCircle(test, 21);
-	drawTriangle(test,21);
-	remplir(test,21);
-	testAndPut(test, 21/2,21/2,21,1);
-	affplateau(test, 21);
-	printf("Over");
-	free(test);
-	return 0;
+void liberer(int * tab, int taille, int * score){
+	int x=0, y=0;
+	int buffer[1024];
+	int i = 0;
+	for(y=0;y<taille;y++){
+		for(x=0;x<taille;x++){
+			if(tab[x+y*taille] = 1){
+				buffer[i++]=(x+y*taille);
+			}
+		}
+	}
+
 }
+
