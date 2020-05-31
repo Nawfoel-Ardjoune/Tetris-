@@ -65,17 +65,20 @@ int main(int argc, char const *argv[])
 		printf("Saisissez : 1 pour Jouer, 2 pour voir les règles\n"); 
 		int choix = changeToInt();
 		switch(choix){
+			case 0:
+				return 0;
+				break;
 			case 1:
-			/* ## LANCE LE JEU ICI ## */
-			test = 0;
-			break;
+				/* ## LANCE LE JEU ICI ## */
+				test = 0;
+				break;
 			case 2:
-			menu("rules.txt");
-			test = 0;
-			break;
+				menu("rules.txt");
+				test = 0;
+				break;
 			default: 
-			printf("Erreur ! ");
-			test = 1;
+				printf("Erreur ! ");
+				test = 1;
 		}
 	}while(test);
 	
@@ -83,30 +86,35 @@ int main(int argc, char const *argv[])
 		/*code du jeu*/
 		do{/* ##ICI SWITCH POUR CERCLE TRIANGLE LOSANGE OU QUITTER## */
 			printf("Cercle: 1, Triangle: 2, Losange: 3 OR Press 0 to quit\n");
+			int type =0;
 			int choix2 = changeToInt();//
 			switch(choix2){
 				case 1:
-				printf("cercle\n");
-				suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
-				test = 0;
+					printf("cercle\n");
+					suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+					test = 0;
+					type =1;
 				break;
 				case 2:
-				printf("triangle\n");
-				suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
-				test = 0;
+					printf("triangle\n");
+					suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+					test = 0;
+					type = 2;
 				break;
 				case 3:
-				printf("Losange\n");
-				test = 0;
+					printf("Losange\n");
+					suite = 0;
+					type = 3;
+					test = 0;
 				case 0:
-				return 0;
+					return 0;
 				// suite = 0; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
 				// test = 0;
 				// break;
 				default: 
-				printf("Erreur !\n");
-				suite = 1; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
-				test = 1;
+					printf("Erreur !\n");
+					suite = 1; //TODO A MODIFIER UNE FOIS LES BOUCLES FAITES 
+					test = 1;
 			}
 		}while(test);
 	}while(suite);
